@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_addresses",
+  "info": {
+    "displayName": "Address",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Street": {
+      "type": "string",
+      "required": true
+    },
+    "Number": {
+      "type": "integer",
+      "required": true
+    },
+    "City": {
+      "type": "string",
+      "required": true
+    },
+    "ZipCode": {
+      "type": "string",
+      "required": true
+    },
+    "Country": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

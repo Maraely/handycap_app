@@ -1,0 +1,130 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Description": {
+      "type": "text",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "NameOfLocation": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Adress": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "LocationOverview": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Capacity": {
+      "type": "biginteger",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Size": {
+      "type": "decimal",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Website": {
+      "type": "string",
+      "default": "URL",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "location"
+    },
+    "ContactInfo": {
+      "displayName": "ContactInfo",
+      "type": "component",
+      "repeatable": false,
+      "component": "first-name.contact-info",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "accessibility_needs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessibility-need.accessibility-need",
+      "mappedBy": "locations"
+    }
+  }
+}

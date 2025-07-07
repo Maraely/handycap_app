@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_accesses",
+  "info": {
+    "singularName": "accessibility-access",
+    "pluralName": "accessibility-accesses",
+    "displayName": "AccessibilityFeature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "accessibility_needs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessibility-need.accessibility-need",
+      "inversedBy": "accessibility_accesses"
+    },
+    "ticket": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ticket.ticket",
+      "inversedBy": "accessibility_accesses"
+    }
+  }
+}

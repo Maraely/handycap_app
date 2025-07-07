@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #004aad;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #005fa3;
+}
+
+p,
+strong,
+label {
+  font-size: 1.15rem;
+}
+
+strong {
+  color: #222;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #004a99;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+.event-page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: #f0f4f8;
+  min-height: 100vh;
+}
+
+.event-container {
+  max-width: 1000px;
+  width: 100%;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-size: 1.1rem;
+}
+
+.event-container h1 {
+  font-size: 2rem;
+  color: #004aad;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.event-box {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.event-box h2 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #0055aa;
+}
+
+.event-box p {
+  font-size: 1rem;
+  margin: 0.8rem 0;
+  color: #444;
+}
+
+.event-link {
+  display: inline-block;
+  color: #0077cc;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}
+
+.event-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.event-detail-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f4f7fb;
+  min-height: 100vh;
+}
+
+.event-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  width: 100%;
+}
+
+.event-detail-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.event-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #003366;
+  text-align: center;
+}
+
+.event-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .event-info-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+.event-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.value {
+  font-size: 1.05rem;
+  color: #222;
+}
+
+.value a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.value a:hover {
+  color: #005fa3;
+}
+
+.language-dropdown {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.language-dropdown:hover,
+.language-dropdown:focus {
+  border-color: #0077cc;
+}
+
+.visit-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.visit-btn:hover {
+  background-color: #005fa3;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  p,
+  strong,
+  label {
+    font-size: 1rem;
+  }
+
+  .event-container {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizers",
+  "info": {
+    "singularName": "organizer",
+    "pluralName": "organizers",
+    "displayName": "Organizer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NameOfOrganizer": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "NGO",
+        "Company",
+        "Individual"
+      ],
+      "required": true
+    },
+    "Website": {
+      "type": "string",
+      "required": false
+    },
+    "Address": {
+      "type": "string",
+      "required": true
+    },
+    "ContactEmail": {
+      "type": "email",
+      "required": true
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    }
+  }
+}

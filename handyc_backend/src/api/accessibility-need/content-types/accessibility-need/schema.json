@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_needs",
+  "info": {
+    "singularName": "accessibility-need",
+    "pluralName": "accessibility-needs",
+    "displayName": "AccessibilityNeed"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NameOfNeed": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "inversedBy": "accessibility_needs"
+    },
+    "accessibility_accesses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessibility-access.accessibility-access",
+      "mappedBy": "accessibility_needs"
+    }
+  }
+}
